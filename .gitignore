@@ -1,0 +1,13 @@
+# PowerShell artifacts
+*.psd1.psm1
+*.psm1.psd1
+
+# Pester results
+TestResults/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

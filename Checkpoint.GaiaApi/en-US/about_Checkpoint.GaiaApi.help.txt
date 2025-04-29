@@ -1,0 +1,19 @@
+.TH about_Checkpoint.GaiaApi 1 \"2025-04-25\" \"0.0.1\" \"Checkpoint.GaiaApi\"
+.SH NAME
+Checkpoint.GaiaApi \- PowerShell module for CheckPoint Gaia API functions.
+
+.SH SYNOPSIS
+This module provides cmdlets to interact with the CheckPoint Gaia REST API.
+
+.SH DESCRIPTION
+Use Connect-GaiaSession to authenticate, then use the various Get- and Set-
+cmdlets to call APIs. Finally, run Disconnect-GaiaSession.
+
+.SH EXAMPLES
+.nf
+PS> $session = Connect-GaiaSession -Server fw01 -Username admin -PlainPassword P@ss
+PS> Get-GaiaConnectionsPresets -Session $session
+PS> $task = Get-GaiaConnections -Session $session -MaxResults 100 -Filter @{ source='1.2.3.4' }
+PS> Get-GaiaTask -Session $session -TaskId $task.TaskId
+PS> Disconnect-GaiaSession -Session $session
+.fi
