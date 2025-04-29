@@ -1,6 +1,6 @@
 
 BeforeAll {
-    Import-Module 'Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1'
+    Import-Module '..\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1'
 }
 
 Describe 'Checkpoint.GaiaApi module' {
