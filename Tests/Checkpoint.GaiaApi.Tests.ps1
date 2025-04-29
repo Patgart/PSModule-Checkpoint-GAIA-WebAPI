@@ -1,7 +1,7 @@
 
 BeforeAll {
     Get-Location | Out-Host
-    Get-Location | Out-Host
+    Get-ChildItem | Out-Host
     Import-Module '..\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1'
 }
 
