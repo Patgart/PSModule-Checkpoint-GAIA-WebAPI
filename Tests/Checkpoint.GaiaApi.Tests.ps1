@@ -1,12 +1,13 @@
 
 BeforeAll {
     Get-Location | Out-Host
-    Get-ChildItem | Out-Host
-    Import-Module '.\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1'
+    Get-ChildItem -Recurse | Out-Host
+    $ImportPath = (Join-Path $PSScriptRoot '.\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1')
+    Write-Output "Importing module from $ImportPath"
+    Import-Module $ImportPath -ErrorAction Stop
 }
 
 Describe 'Checkpoint.GaiaApi module' {
-
     Context 'Cmdlet availability' {
         $cmdLets = @(
             @{cmdLet = 'Connect-GaiaSession';}
