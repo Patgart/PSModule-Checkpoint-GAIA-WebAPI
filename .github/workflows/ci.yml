@@ -9,15 +9,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup PowerShell
-        uses: actions/setup-powershell@v2
-
-      - name: Install Pester
-        run: Install-Module Pester -Force -Scope CurrentUser
+      - name: Check out repository code
+        uses: actions/checkout@v4
 
       - name: Run Pester Tests
         shell: pwsh
         run: |
-          Invoke-Pester -Script Tests/Checkpoint.GaiaApi.Tests.ps1 -Verbose
+          Invoke-Pester -Script Tests/Checkpoint.GaiaApi.Tests.ps1 -Passthru -Verbose
