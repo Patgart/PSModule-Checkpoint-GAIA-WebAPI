@@ -1,4 +1,7 @@
-Import-Module (Join-Path $PSScriptRoot '..\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1')
+
+BeforeAll {
+    Import-Module (Join-Path $PSScriptRoot '..\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1')
+}
 
 Describe 'Checkpoint.GaiaApi module' {
 
