@@ -9,6 +9,11 @@ BeforeAll {
 
 Describe 'Checkpoint.GaiaApi module' {
     Context 'Cmdlet availability' {
+        It "Testing for module Checkpoint.GaiaApi" {
+            Get-Module Checkpoint.GaiaApi -ErrorAction Stop | Should -Not -BeNullOrEmpty
+        }
+    }
+    Context 'Cmdlet availability' {
         $cmdLets = @(
             @{cmdLet = 'Connect-GaiaSession';}
             @{cmdLet = 'Disconnect-GaiaSession';}
