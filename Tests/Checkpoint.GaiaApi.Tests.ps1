@@ -37,10 +37,8 @@ Describe 'Checkpoint.GaiaApi module' {
             @{cmdLet = 'Get-GaiaAllowedClients';}
             @{cmdLet = 'Set-GaiaAllowedClients;'}
         )
-        foreach ($cmdLet in $cmdLets) {
-            It "Testing for cmdlet <cmdlet>" -ForEach $cmdLets {
-                Get-Command -Name $cmdLet -ErrorAction Stop | Should -Not -BeNullOrEmpty
-            }
+        It "Testing for cmdlet <cmdlet>" -ForEach $cmdLets {
+            Get-Command -Name $cmdLet -ErrorAction Stop | Should -Not -BeNullOrEmpty
         }
     }
 }
