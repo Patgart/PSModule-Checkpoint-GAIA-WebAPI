@@ -3,7 +3,7 @@ Import-Module (Join-Path $PSScriptRoot '..\Checkpoint.GaiaApi\Checkpoint.GaiaApi
 Describe 'Checkpoint.GaiaApi module' {
 
     Context 'Cmdlet availability' {
-        $cmds = @(
+        $cmdLets = @(
             'Connect-GaiaSession',
             'Disconnect-GaiaSession',
             'Get-GaiaConnectionsPresets',
@@ -25,9 +25,9 @@ Describe 'Checkpoint.GaiaApi module' {
             'Get-GaiaAllowedClients',
             'Set-GaiaAllowedClients'
         )
-        foreach ($cmd in $cmds) {
-            It "$cmd is available" {
-                Get-Command $cmd -ErrorAction Stop | Should -Not -BeNullOrEmpty
+        foreach ($cmdLet in $cmdLets) {
+            It "$cmdLet is available" {
+                Get-Command $cmdLet -ErrorAction Stop | Should -Not -BeNullOrEmpty
             }
         }
     }
