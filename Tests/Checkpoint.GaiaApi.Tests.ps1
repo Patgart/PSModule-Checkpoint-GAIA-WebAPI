@@ -1,5 +1,7 @@
 
 BeforeAll {
+    Get-Location
+    Get-Location
     Import-Module '..\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1'
 }
 
