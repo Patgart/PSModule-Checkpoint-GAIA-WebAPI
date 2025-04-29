@@ -24,7 +24,7 @@ Describe 'Checkpoint.GaiaApi module' {
             @{cmdLet = 'Set-GaiaAuthenticationOrder';}
             # Allowed Clients
             @{cmdLet = 'Get-GaiaAllowedClients';}
-            @{cmdLet = 'Set-GaiaAllowedClients;}'
+            @{cmdLet = 'Set-GaiaAllowedClients;'}
         )
         foreach ($cmdLet in $cmdLets) {
             It "Testing for cmdlet <cmdlet>" -ForEach $cmdLets {
