@@ -45,3 +45,4 @@ Describe 'Checkpoint.GaiaApi module' {
             { Set-GaiaAllowedClients -Session $session } | Should -Throw
         }
     }
+}
