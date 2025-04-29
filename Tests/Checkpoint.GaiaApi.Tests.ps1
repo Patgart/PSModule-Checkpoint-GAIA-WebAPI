@@ -2,7 +2,7 @@
 BeforeAll {
     Get-Location | Out-Host
     Get-ChildItem -Recurse | Out-Host
-    $ImportPath = (Join-Path $PSScriptRoot '..\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1')
+    $ImportPath = (Join-Path (Get-Location).Path '\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1')
     Write-Output "Importing module from $ImportPath"
     Import-Module $ImportPath -ErrorAction Stop
 }
