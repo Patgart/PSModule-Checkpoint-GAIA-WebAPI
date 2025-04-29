@@ -12,6 +12,15 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      - name: Display the path
+        shell: powershell
+        run: echo ${env:GITHUB_WORKSPACE}
+      - name: Version Display
+        shell: powershell
+        run: $PSVersionTable
+      - name: Bootstrap
+        shell: powershell
+        run: Import-Module -Name Pester -MinimumVersion 5.7.1
       - name: Run Pester Tests
         shell: pwsh
         run: |
