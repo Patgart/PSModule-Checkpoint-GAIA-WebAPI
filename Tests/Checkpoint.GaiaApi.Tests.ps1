@@ -1,14 +1,11 @@
-
 BeforeAll {
-    Get-Location | Out-Host
-    Get-ChildItem -Recurse | Out-Host
     $ImportPath = (Join-Path (Get-Location).Path '\Checkpoint.GaiaApi\Checkpoint.GaiaApi.psm1')
     Write-Output "Importing module from $ImportPath"
     Import-Module $ImportPath -ErrorAction Stop
 }
 
 Describe 'Checkpoint.GaiaApi module' {
-    Context 'Cmdlet availability' {
+    Context 'Module availability' {
         It "Testing for module Checkpoint.GaiaApi" {
             Get-Module Checkpoint.GaiaApi -ErrorAction Stop | Should -Not -BeNullOrEmpty
         }
@@ -35,7 +32,27 @@ Describe 'Checkpoint.GaiaApi module' {
             @{cmdLet = 'Set-GaiaAuthenticationOrder';},
             # Allowed Clients
             @{cmdLet = 'Get-GaiaAllowedClients';},
-            @{cmdLet = 'Set-GaiaAllowedClients'}
+            @{cmdLet = 'Set-GaiaAllowedClients';},
+            # Network Management (existing)
+            @{cmdLet = 'Get-GaiaArp';},
+            @{cmdLet = 'Set-GaiaArp';},
+            @{cmdLet = 'Get-GaiaDhcp6Config';},
+            @{cmdLet = 'Set-GaiaDhcp6Config';},
+            @{cmdLet = 'Get-GaiaDhcp6Server';},
+            @{cmdLet = 'Set-GaiaDhcp6Server';},
+            @{cmdLet = 'Get-GaiaDhcpServer';},
+            @{cmdLet = 'Set-GaiaDhcpServer';},
+            # Network Management (new)
+            @{cmdLet = 'Get-GaiaDns';},
+            @{cmdLet = 'Set-GaiaDns';},
+            @{cmdLet = 'Get-GaiaNtp';},
+            @{cmdLet = 'Set-GaiaNtp';},
+            @{cmdLet = 'Get-GaiaTimeAndDate';},
+            @{cmdLet = 'Set-GaiaTimeAndDate';},
+            @{cmdLet = 'Get-GaiaTimezones';},
+            @{cmdLet = 'Get-GaiaProxy';},
+            @{cmdLet = 'Set-GaiaProxy';},
+            @{cmdLet = 'Remove-GaiaProxy';}
         )
         It "Testing for cmdlet <cmdlet>" -ForEach $cmdLets {
             Get-Command -Name $cmdLet -ErrorAction Stop | Should -Not -BeNullOrEmpty
