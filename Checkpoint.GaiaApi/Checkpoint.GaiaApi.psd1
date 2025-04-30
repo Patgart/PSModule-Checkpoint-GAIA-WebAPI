@@ -3,7 +3,7 @@
     RootModule        = 'Checkpoint.GaiaApi.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '0.0.3'
+    ModuleVersion     = '0.0.5'
 
     # ID used to uniquely identify this module
     GUID              = '2ef225a9-057e-47ca-8a94-3b559091e0e7'
@@ -37,17 +37,40 @@
         'Set-GaiaAuthenticationOrder',
         # Allowed Clients
         'Get-GaiaAllowedClients',
-        'Set-GaiaAllowedClients'
+        'Set-GaiaAllowedClients',
+        # Network Management
+        'Get-GaiaArp',
+        'Set-GaiaArp',
+        'Get-GaiaDhcp6Config',
+        'Set-GaiaDhcp6Config',
+        'Get-GaiaDhcp6Server',
+        'Set-GaiaDhcp6Server',
+        'Get-GaiaDhcpServer',
+        'Set-GaiaDhcpServer',
+        'Get-GaiaDns',
+        'Set-GaiaDns',
+        'Get-GaiaNtp',
+        'Set-GaiaNtp',
+        'Get-GaiaTimeAndDate',
+        'Set-GaiaTimeAndDate',
+        'Get-GaiaTimezones',
+        'Get-GaiaProxy',
+        'Set-GaiaProxy',
+        'Remove-GaiaProxy'
     )
 
     CmdletsToExport   = @()
     AliasesToExport   = @()
     PrivateData       = @{
         PSData = @{
-            Tags        = @('Checkpoint','Gaia','API','Authentication','AllowedClients')
+            Tags        = @(
+                'Checkpoint','Gaia','API',
+                'Network','ARP','DHCP','DHCPv6',
+                'DNS','NTP','Time','Proxy'
+            )
             LicenseUri  = 'https://opensource.org/licenses/MIT'
             ProjectUri  = 'https://github.com/Patgart/PSModule-Checkpoint-GAIA-WebAPI'
-            ReleaseNotes= 'Added Allowed Clients (show-allowed-clients, set-allowed-clients).'
+            ReleaseNotes= 'Added DNS, NTP, Time/Date, Timezones, Proxy cmdlets.'
         }
     }
 }
