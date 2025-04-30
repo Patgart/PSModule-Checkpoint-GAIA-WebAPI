@@ -28,25 +28,25 @@ function Set-GaiaDns {
         [Parameter(Mandatory=$true)]
         [PSCustomObject]$Session,
 
-        [Parameter()][ValidateNotNullOrEmpty()]]
+        [Parameter()][ValidateNotNullOrEmpty()]
         [string]$Primary,
 
-        [Parameter()][ValidateNotNullOrEmpty()]]
+        [Parameter()][ValidateNotNullOrEmpty()]
         [string]$Secondary,
 
-        [Parameter()][ValidateNotNullOrEmpty()]]
+        [Parameter()][ValidateNotNullOrEmpty()]
         [string]$Suffix,
 
-        [Parameter()][ValidateNotNullOrEmpty()]]
+        [Parameter()][ValidateNotNullOrEmpty()]
         [string]$Tertiary,
 
-        [Parameter()][ValidateNotNullOrEmpty()]]
+        [Parameter()][ValidateNotNullOrEmpty()]
         [hashtable[]]$ForwardingDomains,
 
-        [Parameter()][ValidateNotNullOrEmpty()]]
+        [Parameter()][ValidateNotNullOrEmpty()]
         [string[]]$ListeningInterfaces,
 
-        [Parameter()][ValidateNotNullOrEmpty()]]
+        [Parameter()][ValidateNotNullOrEmpty()]
         [string]$MemberId
     )
 
