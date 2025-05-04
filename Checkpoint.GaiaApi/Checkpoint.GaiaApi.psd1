@@ -56,7 +56,13 @@
         'Get-GaiaTimezones',
         'Get-GaiaProxy',
         'Set-GaiaProxy',
-        'Remove-GaiaProxy'
+        # Networking
+        'Remove-GaiaProxy',
+        'Remove-GaiaStaticRoute',
+        'Set-GaiaStaticRoute',
+        'Set-GaiaStaticRouteNextHopPriority',
+        'Get-GaiaStaticRoute',
+        'Get-GaiaStaticRoutes'
     )
 
     CmdletsToExport   = @()
