@@ -42,7 +42,7 @@ Describe 'Checkpoint.GaiaApi module' {
             @{cmdLet = 'Set-GaiaDhcp6Server';},
             @{cmdLet = 'Get-GaiaDhcpServer';},
             @{cmdLet = 'Set-GaiaDhcpServer';},
-            # Network Management (new)
+            # Network Management
             @{cmdLet = 'Get-GaiaDns';},
             @{cmdLet = 'Set-GaiaDns';},
             @{cmdLet = 'Get-GaiaNtp';},
@@ -52,7 +52,13 @@ Describe 'Checkpoint.GaiaApi module' {
             @{cmdLet = 'Get-GaiaTimezones';},
             @{cmdLet = 'Get-GaiaProxy';},
             @{cmdLet = 'Set-GaiaProxy';},
-            @{cmdLet = 'Remove-GaiaProxy';}
+            @{cmdLet = 'Remove-GaiaProxy';},
+            # Networking
+            @{cmdLet = 'Remove-GaiaStaticRoute';},
+            @{cmdLet = 'Set-GaiaStaticRoute';},
+            @{cmdLet = 'Set-GaiaStaticRouteNextHopPriority';},
+            @{cmdLet = 'Get-GaiaStaticRoute';},
+            @{cmdLet = 'Get-GaiaStaticRoutes';}
         )
         It "Testing for cmdlet <cmdlet>" -ForEach $cmdLets {
             Get-Command -Name $cmdLet -ErrorAction Stop | Should -Not -BeNullOrEmpty
