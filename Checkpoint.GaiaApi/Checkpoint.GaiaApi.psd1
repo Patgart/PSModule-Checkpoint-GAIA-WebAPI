@@ -93,6 +93,12 @@
         'Add-GaiaBgpConfederationPeer',
         'Set-GaiaBgpConfederationPeer',
         'Remove-GaiaBgpConfederationPeer'
+        'Remove-GaiaProxy',
+        'Remove-GaiaStaticRoute',
+        'Set-GaiaStaticRoute',
+        'Set-GaiaStaticRouteNextHopPriority',
+        'Get-GaiaStaticRoute',
+        'Get-GaiaStaticRoutes'
     )
 
     CmdletsToExport   = @()
