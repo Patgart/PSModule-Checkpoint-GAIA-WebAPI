@@ -11,7 +11,7 @@
     Author            = 'Patrick Zander'
     Copyright         = '(c) 2025'
     Description       = 'PowerShell module for CheckPoint Gaia API.'
-    PowerShellVersion = '5.1'
+    PowerShellVersion = '7.5'
     RequiredModules   = @()
 
     # Functions to export
@@ -92,8 +92,7 @@
         'Set-GaiaBgpConfederation',
         'Add-GaiaBgpConfederationPeer',
         'Set-GaiaBgpConfederationPeer',
-        'Remove-GaiaBgpConfederationPeer'
-        'Remove-GaiaProxy',
+        'Remove-GaiaBgpConfederationPeer',
         'Remove-GaiaStaticRoute',
         'Set-GaiaStaticRoute',
         'Set-GaiaStaticRouteNextHopPriority',
