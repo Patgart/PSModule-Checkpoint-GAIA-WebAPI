@@ -58,8 +58,8 @@ function Get-GaiaBgpPaths {
             NextHop        = $_.nexthop
             LocalAs        = $_.'local-as'
             NeighborAs     = $_.'neighbor-as'
-            ReferenceCount = [int]$.'reference-count'
-            AsNum          = [int]$.'as-num'
+            ReferenceCount = [int]$_.'reference-count'
+            AsNum          = [int]$_.'as-num'
             Segments       = [int]$segments
             Overhead       = [int]$overhead
             AggregatorId   = $_.'aggregator-id'

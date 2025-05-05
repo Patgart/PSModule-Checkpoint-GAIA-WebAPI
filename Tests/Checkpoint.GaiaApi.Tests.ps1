@@ -33,7 +33,7 @@ Describe 'Checkpoint.GaiaApi module' {
             # Allowed Clients
             @{cmdLet = 'Get-GaiaAllowedClients';},
             @{cmdLet = 'Set-GaiaAllowedClients';},
-            # Network Management (existing)
+            # Network Management
             @{cmdLet = 'Get-GaiaArp';},
             @{cmdLet = 'Set-GaiaArp';},
             @{cmdLet = 'Get-GaiaDhcp6Config';},
@@ -42,7 +42,6 @@ Describe 'Checkpoint.GaiaApi module' {
             @{cmdLet = 'Set-GaiaDhcp6Server';},
             @{cmdLet = 'Get-GaiaDhcpServer';},
             @{cmdLet = 'Set-GaiaDhcpServer';},
-            # Network Management
             @{cmdLet = 'Get-GaiaDns';},
             @{cmdLet = 'Set-GaiaDns';},
             @{cmdLet = 'Get-GaiaNtp';},
@@ -54,6 +53,10 @@ Describe 'Checkpoint.GaiaApi module' {
             @{cmdLet = 'Set-GaiaProxy';},
             @{cmdLet = 'Remove-GaiaProxy';},
             # Networking
+            @{cmdLet = 'Get-GaiaBgpErrors';},
+            @{cmdLet = 'Get-GaiaBgpGroups';},
+            @{cmdLet = 'Get-GaiaBgpPaths';},
+            @{cmdLet = 'Get-GaiaBgpPeer';},
             @{cmdLet = 'Remove-GaiaStaticRoute';},
             @{cmdLet = 'Set-GaiaStaticRoute';},
             @{cmdLet = 'Set-GaiaStaticRouteNextHopPriority';},

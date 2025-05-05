@@ -11,7 +11,7 @@
     Author            = 'Patrick Zander'
     Copyright         = '(c) 2025'
     Description       = 'PowerShell module for CheckPoint Gaia API.'
-    PowerShellVersion = '5.1'
+    PowerShellVersion = '7.5'
     RequiredModules   = @()
 
     # Functions to export
@@ -62,38 +62,6 @@
         'Get-GaiaBgpGroups',
         'Get-GaiaBgpPaths',
         'Get-GaiaBgpPeer',
-        'Get-GaiaBgpPeers',
-        'Get-GaiaBgpRouteIn',
-        'Get-GaiaBgpRoutesIn',
-        'Get-GaiaBgpRouteOut',
-        'Get-GaiaBgpRoutesOut',
-        'Get-GaiaBgpRoutemaps',
-        'Get-GaiaBgpStats',
-        'Get-GaiaBgpSummary',
-        'Get-GaiaBgpConfiguration',
-        'Get-GaiaBgpConfigurationInternal',
-        'Get-GaiaBgpConfigurationInternalPeers',
-        'Get-GaiaBgpConfigurationInternalPeer',
-        'Get-GaiaBgpConfigurationExternal',
-        'Get-GaiaBgpConfigurationExternalPeers',
-        'Get-GaiaBgpConfigurationExternalPeer',
-        'Get-GaiaBgpConfigurationConfederation',
-        'Get-GaiaBgpConfigurationConfederationPeers',
-        'Get-GaiaBgpConfigurationConfederationPeer',
-        'Set-GaiaBgp',
-        'Set-GaiaBgpInternal',
-        'Add-GaiaBgpInternalPeer',
-        'Set-GaiaBgpInternalPeer',
-        'Remove-GaiaBgpInternalPeer',
-        'Set-GaiaBgpExternal',
-        'Add-GaiaBgpExternalPeer',
-        'Set-GaiaBgpExternalPeer',
-        'Remove-GaiaBgpExternalPeer',
-        'Set-GaiaBgpConfederation',
-        'Add-GaiaBgpConfederationPeer',
-        'Set-GaiaBgpConfederationPeer',
-        'Remove-GaiaBgpConfederationPeer'
-        'Remove-GaiaProxy',
         'Remove-GaiaStaticRoute',
         'Set-GaiaStaticRoute',
         'Set-GaiaStaticRouteNextHopPriority',
